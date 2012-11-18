@@ -36,3 +36,23 @@
 ;; These should output (Good to go)
 (can-drive? 16)
 (can-drive? 20)
+
+;; Exercise 3b.
+(define (fizzbuzz n)
+  (cond ((= 0 (remainder n 3) (remainder n 5)) 'fizzbuzz)
+	((= 0 (remainder n 3)) 'fizz)
+	((= 0 (remainder n 5)) 'buzz)
+	(else n)))
+
+
+;; Fizz
+(fizzbuzz 6)
+;; Buzz
+(fizzbuzz 10)
+;; FizzBuzz
+(fizzbuzz 15)
+;; 11
+(fizzbuzz 11)
+
+
+
