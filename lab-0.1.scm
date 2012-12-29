@@ -55,4 +55,25 @@
 (fizzbuzz 11)
 
 
+;;Homework
 
+; Exercise 4
+(define (infinite-loop) (infinite-loop))
+
+(if (= 3 6)
+    (infinite-loop)
+    (/ 4 2))
+
+(define (new-if test then-case else-case)
+  (if test
+      then-case
+      else-case))
+
+(new-if (= 3 6)
+	(infinite-loop)
+	(/ 4 2))
+
+;; This goes into an infinite loop because the arguments to a
+;; procedure get recursively resolved before passed as formal
+;; parameters to the procedure. Thus, it tries to get the value of
+;; infinite-loop before running new-if.
